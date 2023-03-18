@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <ImageView
+        android:id="@+id/mainImage"
+        android:background="?attr/colorOnBackground"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/opaque_black"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="10dp">
+            <TextView
+                android:id="@+id/attribute_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/urbanist_regular"
+                android:text="@string/unsplash_attribute"
+                android:textColor="@color/cool_gray"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/quoteText"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/text_loading"
+            android:paddingBottom="30dp"
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/authorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quoteText"
+            android:text="-Author"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_bookmark_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:textAllCaps="false"
+            android:text="@string/text_save"
+
+            android:padding="10dp"
+            app:icon="@drawable/ic_add_bookmark"
+            app:iconTint="@color/white"
+            android:layout_marginEnd="5dp"
+            app:iconGravity="textStart"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/share_button"
+            app:layout_constraintHorizontal_chainStyle="spread"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/share_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:text="@string/text_share"
+            android:textAllCaps="false"
+
+            app:icon="@drawable/ic_share"
+            app:iconTint="@color/white"
+            app:iconGravity="textStart"
+
+            android:padding="10dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintLeft_toRightOf="@+id/add_bookmark_button"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
