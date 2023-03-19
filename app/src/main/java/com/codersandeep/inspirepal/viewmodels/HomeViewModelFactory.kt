@@ -5,8 +5,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.codersandeep.inspirepal.data.repository.ImageRepository
 import com.codersandeep.inspirepal.data.repository.QuoteRepository
 
-class MainViewModelFactory(private val quoteRepository: QuoteRepository,private val imageRepository: ImageRepository) : ViewModelProvider.Factory {
+class HomeViewModelFactory(private val quoteRepository: QuoteRepository, private val imageRepository: ImageRepository) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return MainViewModel(quoteRepository,imageRepository) as T
+        return HomeViewModel(quoteRepository,imageRepository) as T
     }
 }

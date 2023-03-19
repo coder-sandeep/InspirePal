@@ -1,6 +1,6 @@
-package com.codersandeep.inspirepal.data.models
+package com.codersandeep.inspirepal.data.models.unsplash
 
-data class ImageUrls(
+data class Urls(
     val full: String,
     val raw: String,
     val regular: String,

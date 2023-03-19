@@ -1,7 +1,6 @@
 package com.codersandeep.inspirepal.data.api
 
-import com.codersandeep.inspirepal.R
-import com.codersandeep.inspirepal.data.models.Image
+import com.codersandeep.inspirepal.data.models.unsplash.Image
 import com.codersandeep.inspirepal.utils.APIKeys
 import retrofit2.Response
 import retrofit2.http.GET

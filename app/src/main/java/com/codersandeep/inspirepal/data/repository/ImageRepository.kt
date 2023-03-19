@@ -4,8 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.liveData
 import com.codersandeep.inspirepal.data.api.ImageService
-import com.codersandeep.inspirepal.data.models.Image
-import com.codersandeep.inspirepal.data.models.Quote
+import com.codersandeep.inspirepal.data.models.unsplash.Image
 
 class ImageRepository(private val imageService: ImageService) {
 
