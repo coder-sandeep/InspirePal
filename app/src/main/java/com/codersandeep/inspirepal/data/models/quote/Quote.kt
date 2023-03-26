@@ -1,4 +1,4 @@
-package com.codersandeep.inspirepal.data.models
+package com.codersandeep.inspirepal.data.models.quote
 
 data class Quote(
     val _id: String,

@@ -1,6 +1,6 @@
 package com.codersandeep.inspirepal.data.api
 
-import com.codersandeep.inspirepal.data.models.Quote
+import com.codersandeep.inspirepal.data.models.quote.Quote
 import retrofit2.Response
 import retrofit2.http.GET
 

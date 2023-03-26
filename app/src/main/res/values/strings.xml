@@ -7,4 +7,6 @@
     <string name="text_next">Next Quote</string>
     <string name="text_loading">Loading…</string>
     <string name="unsplash_attribute">Photo by name on Unsplash</string>
+    <string name="share_text">Share using</string>
+    <string name="share_subject">Blank subject</string>
 </resources>
