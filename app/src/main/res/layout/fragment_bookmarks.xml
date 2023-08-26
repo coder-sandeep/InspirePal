@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/item_view_root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.HomeFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    tools:context=".ui.fragments.HomeFragment"
+    android:layout_marginTop="24dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/quotes_recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Bookmarks" />
+        android:layout_height="match_parent"/>
 
 </FrameLayout>

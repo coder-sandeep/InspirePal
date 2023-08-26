@@ -14,13 +14,14 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(private val mainRepository: MainRepository): ViewModel() {
     init {
-        getNextQuote()
+        getQuote()
     }
     val quotes: MutableLiveData<Quote> = MutableLiveData()
     val image: MutableLiveData<Image> = MutableLiveData()
 
 
-    fun getNextQuote() {
+
+    fun getQuote() {
         viewModelScope.launch {
             val response = mainRepository.getQuote()
             quotes.postValue(response.body())
@@ -35,4 +36,11 @@ class MainViewModel(private val mainRepository: MainRepository): ViewModel() {
              mainRepository.saveQuote(quoteEntity)
          }
     }
+    fun getSavedQuotes() = mainRepository.getSavedQuotes()
+    fun deleteQuote(quote: QuoteEntity) {
+        viewModelScope.launch {
+            mainRepository.deleteQuote(quote)
+        }
+    }
+
 }

@@ -11,5 +11,8 @@ class MainRepository(private val imageService: ImageService, private val quoteSe
     suspend fun getImage(queryString:String) = imageService.getImage(queryString)
 
     suspend fun saveQuote(quoteEntity: QuoteEntity) = quoteDatabase.quoteDao().insertQuote(quoteEntity)
+    fun getSavedQuotes() = quoteDatabase.quoteDao().getQuotes()
+
+    suspend fun deleteQuote(quote: QuoteEntity) = quoteDatabase.quoteDao().deleteQuote(quote)
 
 }
